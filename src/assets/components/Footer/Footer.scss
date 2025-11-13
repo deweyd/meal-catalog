@@ -1,0 +1,22 @@
+.footer{
+  background: #36720e;
+  &__top{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    .container-wrap{
+      display: flex;
+    }
+    .logo{
+     margin-right: 0;
+    }
+  }
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-left: -8%;
+  }
+}

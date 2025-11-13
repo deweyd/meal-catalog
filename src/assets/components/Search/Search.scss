@@ -1,0 +1,64 @@
+.example input[type=text] {
+  border: 0;
+  outline: 0;
+  padding: 0 0 0 43px;
+  background: transparent;
+  font-size: 18px;
+}
+.example{
+  position: relative;
+  input:focus{
+    color: white;
+  }
+  input{
+    display: none;
+    border-radius: 93px;
+    border: 1px solid white;
+    width: 370px;
+    height: 40px;
+    padding: 0px 30px;
+    flex-shrink: 0;
+    justify-content: space-between;
+    color: #61dafb;
+  }
+  input:not(:focus) {
+    opacity: 0;
+  }
+}
+.example input.active{
+  display: block;
+  position: absolute;
+  right: 10px;
+  border: 1px solid white;
+  opacity: 1;
+  background-color: #36720e;
+  top: -4px;
+}
+
+.example button {
+  padding: 10px;
+  background: transparent;
+  color: white;
+  outline: none;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  img{
+    width: 29px;
+    height: 29px;
+  }
+}
+.button-search{
+  display: flex;
+  align-items: center;
+  width: 30px;
+  img{
+    width: 100%;
+    z-index: 9;
+  }
+}
+.example button:hover {
+  background: #0b7dda;
+}
+
+

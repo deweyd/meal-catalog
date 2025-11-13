@@ -1,0 +1,226 @@
+.content{
+  display: flex;
+  justify-content: space-between;
+}
+.actors{
+  border-radius: 5px;
+  border: 1px solid #2B2B2B;
+  background: #212121;
+  width: 100%;
+  padding: 15px;
+  margin: 15px;
+  &__title{
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 30px;
+    display: inherit;
+    color: white;
+  }
+}
+
+@media (max-width: 1628px) {
+  .example{
+    width: 285px;
+  }
+  .content .movie__about{
+    width: 100%;
+  }
+  .content .movie__points{
+    display: none;
+  }
+  .tile_average{
+    width: 48%;
+  }
+  .movie{
+    flex-direction: column;
+  }
+  .tile_small{
+    width: 31%;
+  }
+  .content{
+    flex-direction: column;
+    .tile_small{
+      max-width: none;
+      width: 30%;
+    }
+  }
+  .content .tile_average{
+    max-width: none;
+    width: 47%;
+  }
+  .content .content__main{
+    width: 100%;
+    max-width: 100%;
+  }
+  .content__aside{
+    width: 100%;
+    max-width: 100%;
+  }
+  .content .movie__item{
+    width: 100%;
+    margin: 50px 0;
+  }
+  .content .popular-box__item{
+    display: none;
+    &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5){
+      display: flex;
+    }
+  }
+  .content .popular-box__img {
+    width: 300px;
+    height: 453px;
+  }
+  .content .popular-box{
+    display: none;
+  }
+  .footer__top .logo {
+    min-width: 287px;
+    margin-right: 50px;
+  }
+  .footer{
+    width: 100%;
+  }
+  .footer__menu {
+    margin-right: 50px;
+  }
+}
+@media (max-width: 1358px){
+  .header{
+    height: 195px;
+  }
+  .card:nth-child(5n+5) {
+    margin-right: 15px;
+  }
+  .selection__cards{
+    justify-content: space-between;
+  }
+  .card:nth-child(4n+4) {
+    margin-right: 0;
+  }
+  .content .card{
+    width: 23%;
+  }
+  .content{
+    .tile_small{
+      width: 47%;
+      margin-right: 0;
+    }
+  }
+  .footer{
+    .footer__bottom{
+      flex-direction: column;
+    }
+    .footer__law{
+      margin-bottom: 20px;
+    }
+    .footer__politic{
+      margin: 20px 0;
+    }
+  }
+  .header .container-wrap{
+    flex-direction: column;
+  }
+  .footer__top .container-wrap{
+    flex-direction: column;
+  }
+  .footer__top .logo{
+    height: auto;
+  }
+}
+@media (max-width: 680px){
+  .header__left{
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .content .tile_average .tile__name{
+    font-size: 40px;
+  }
+  .content .card{
+    width: 47%;
+  }
+  .content .movie__left-box {
+    position: relative;
+    width: 100%;
+    margin: 0;
+  }
+  .card:nth-child(4n+4) {
+    margin-right: 0;
+  }
+  .card:nth-child(2n+2) {
+    margin-right: 0;
+  }
+  .content .selection__title{
+    font-size: 30px;
+  }
+  .tile_big{
+    .tile__name{
+      font-size: 40px;
+    }
+  }
+  .content .tile_average{
+    width: 100%;
+    margin-right: 0;
+  }
+  .content .tile_small{
+    width: 100%;
+  }
+  .header {
+    height: 225px;
+  }
+  .content .movie__item{
+    flex-direction: column;
+  }
+  .content .movie__about{
+    width: 100%;
+  }
+  .footer__menu{
+    display: none;
+  }
+  .footer__caption{
+    display: none;
+  }
+  .footer__box{
+    flex-direction: column;
+  }
+  .content .person-page{
+    flex-direction: column;
+  }
+  .content .person-page__left-box{
+    margin-right: 0;
+  }
+  .content .person-page__right-box{
+    width: 100%;
+  }
+}
+@media (max-width: 500px){
+  .example{
+    height: 35px;
+    width: 80%;
+  }
+  .box__text p {
+    font-size: 20px;
+  }
+  .content .selection__title{
+    font-size: 30px;
+  }
+  .content .card {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .header .menu__main ul li {
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+  .header {
+    height: auto;
+  }
+  .header .menu__main ul{
+    flex-direction: column;
+  }
+  .content .card{
+    margin-bottom: 20px;
+  }
+}

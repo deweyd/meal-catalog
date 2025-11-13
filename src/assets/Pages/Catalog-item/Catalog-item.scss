@@ -1,0 +1,21 @@
+.content{
+  display: flex;
+  justify-content: space-between;
+}
+.catalog-item-bl{
+  text-align: center;
+  img{
+    margin-bottom: 30px;
+    width: max-content;
+  }
+}
+.container-direction{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.catalog-item{
+  a{
+    color: black;
+  }
+}
