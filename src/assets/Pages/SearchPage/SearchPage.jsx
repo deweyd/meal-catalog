@@ -11,10 +11,8 @@ function SearchPage() {
     const [meals, setMeals] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-
     useEffect(() => {
         if (!query) return;
-
         const fetchMeals = async () => {
             setLoading(true);
             try {
