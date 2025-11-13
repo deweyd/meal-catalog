@@ -6,27 +6,34 @@
   font-size: 18px;
 }
 .example{
-  height: 64px;
-}
-.example{
-  display: flex;
-  border-radius: 93px;
-  border: 2px solid #252A2C;
-  background: #1B1E1E;
-  width: 716px;
-  height: 64px;
-  padding: 0px 30px;
-  flex-shrink: 0;
-  justify-content: space-between;
-  color: #61dafb;
+  position: relative;
   input:focus{
     color: white;
+  }
+  input{
+    display: none;
+    border-radius: 93px;
+    border: 1px solid white;
+    width: 370px;
+    height: 40px;
+    padding: 0px 30px;
+    flex-shrink: 0;
+    justify-content: space-between;
+    color: #61dafb;
   }
   input:not(:focus) {
     opacity: 0;
   }
 }
-
+.example input.active{
+  display: block;
+  position: absolute;
+  right: 10px;
+  border: 1px solid white;
+  opacity: 1;
+  background-color: #36720e;
+  top: -4px;
+}
 
 .example button {
   padding: 10px;
@@ -44,6 +51,11 @@
 .button-search{
   display: flex;
   align-items: center;
+  width: 30px;
+  img{
+    width: 100%;
+    z-index: 9;
+  }
 }
 .example button:hover {
   background: #0b7dda;

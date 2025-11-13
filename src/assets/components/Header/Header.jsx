@@ -1,9 +1,8 @@
 import './Header.scss'
-import Logo from "../Logo/index.jsx";
-import Menu from "../Menu/index.jsx";
-import Search from "../Search/index.jsx";
 import {useState} from "react";
-
+import Logo from "../Logo/Logo.jsx";
+import Search from "../Search/index.jsx";
+import { Link } from "react-router-dom";
 
 
 function Header() {
@@ -12,10 +11,17 @@ function Header() {
         <div className={"header"}>
             <div className="container-wrap">
                 <div className={"header__left"}>
-                    <Logo onClick={() => setClick(null)}/>
-                    <Menu click={click} handleActive={setClick}/>
+                    <Logo/>
                 </div>
-                <Search/>
+                <div className={"header__right"}>
+                    <Link to="/catalog" className="header__link">
+                        Catalog of meals
+                    </Link>
+                    {/*<Link to="/about" className="header__link">*/}
+                    {/*    Про ехінодоруси*/}
+                    {/*</Link>*/}
+                    <Search/>
+                </div>
             </div>
         </div>
     );

@@ -1,19 +1,21 @@
 import './Search.scss';
 import {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {DATA_MOVIE, FILTER_CARD} from "../../store/actions.jsx"
-import searchIcon from "../../images/search.svg"
-import UseApi from "../useApi/index.jsx";
-import {storeElement14} from "../../variables.js";
+import { useNavigate } from 'react-router-dom';
 import {Link} from "react-router-dom";
 
 
 function Search() {
-    const {todos1, dataSection} = useSelector((state) => state.todos);
-    const dispatch = useDispatch();
     const [search, setSearch] = useState('');
+    const [active, setActive] = useState(false);
+    const navigate = useNavigate();
+    const handleButtonClick = (e) => {
+        e.preventDefault();
+        setActive(!active);
+        if (search.trim() !== '') {
+            navigate(`/search?query=${encodeURIComponent(search)}`);
+        }
+    };
 
-    UseApi({type:FILTER_CARD, storeElement:storeElement14, nameId: search});
     return (
         <div className={"example"}>
             <input
@@ -22,10 +24,10 @@ function Search() {
                 value={search}
                 name="search"
                 onChange={(e) => setSearch(e.target.value)}
-                // onBlur={handleInputBlur}
+                className={active ? "active" : ""} // додаємо клас
             />
-            <Link className="button-search" to="/Genre" >
-                <img src={searchIcon} alt="SearchPage" />
+            <Link className="button-search" to="#" onClick={handleButtonClick}>
+                <img src='https://i.ibb.co/KyY2zC2/search.png' alt="SearchPage" />
             </Link>
         </div>
     );
