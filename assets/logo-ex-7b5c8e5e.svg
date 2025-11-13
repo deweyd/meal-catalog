@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="80" viewBox="0 0 300 80">
+  <!-- Іконка ліворуч (стилізоване листя) -->
+  <g transform="translate(0,0)">
+    <path d="M10 60 C20 30, 40 30, 50 60 C40 40, 20 40, 10 60 Z" fill="white"></path>
+    <circle cx="30" cy="50" r="5" fill="white"></circle>
+  </g>
+
+  <!-- Текст праворуч -->
+  <text x="70" y="55" font-family="Arial, sans-serif" font-size="36" fill="white">
+    Meals
+  </text>
+</svg>
