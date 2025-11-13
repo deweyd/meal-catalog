@@ -66,7 +66,7 @@ function Catalog() {
                         className="btn-load-more"
                         onClick={loadMore}
                         style={{
-                            background: "#36720e",
+                            background: "black",
                             color: "#fff",
                             border: "none",
                             padding: "10px 20px",

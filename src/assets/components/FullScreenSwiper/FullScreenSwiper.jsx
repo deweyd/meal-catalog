@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Pagination, Navigation } from "swiper/modules";
 import React, { useEffect, useState } from "react";
 
 function FullScreenSwiper() {
@@ -35,7 +36,14 @@ function FullScreenSwiper() {
             <Swiper
                 slidesPerView={1}
                 loop={true}
+                pagination={{ clickable: true }}
                 style={{ width: "100vw", height: "75vh" }}
+                navigation={true}
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }}
+                modules={[Pagination, Navigation]}
             >
                 {meals.map((meal) => (
                     <SwiperSlide key={meal.idMeal}>
